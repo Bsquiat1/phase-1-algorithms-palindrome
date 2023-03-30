@@ -1,9 +1,25 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+
+function isPalindrome(s) {
+  if (s.length <= 1) {
+    // A string of length 0 or 1 is always a palindrome
+    return true;
+  }
+  
+  // Check if the first and last characters match
+  if (s[0] !== s[s.length - 1]) {
+    return false;
+  }
+  
+  // Recursively check the substring between the first and last characters
+  return isPalindrome(s.slice(1, s.length - 1));
 }
 
-/* 
-  Add your pseudocode here
+
+/*
+if first letter = last letter
+   return "True"
+else 
+   return "false"
 */
 
 /*
